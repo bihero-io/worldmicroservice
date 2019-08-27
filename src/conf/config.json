@@ -1,0 +1,10 @@
+{
+  "type": "file",
+  "format": "json",
+  "scanPeriod": 5000,
+  "config": {
+    "path": "/home/slava/JavaProjects/hello-world-to-cloud/worldmicroservice/src/conf/config.json"
+  },
+  "serverPort": 8082,
+  "serverHost": "0.0.0.0"
+}

@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: World ;)
+  description: "'World' word microservice"
+  version: 1.0.0
+servers:
+  - url: https://demo1.bihero.io/api/world
+tags:
+  - name: world
+    description: Everything about 'World' word
+paths:
+  /:
+    x-vertx-event-bus:
+      address: service.world
+      timeout: 1000
+    get:
+      tags:
+        - hello
+      summary: Get 'World' word
+      operationId: getWorldWord
+      responses:
+        200:
+          description: OK
+          content: {}
+components: {}
