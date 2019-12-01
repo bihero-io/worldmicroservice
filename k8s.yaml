@@ -18,9 +18,9 @@ spec:
     spec:
       containers:
         - image: bihero/world:${HELLO_SERVICE_IMAGE_VERSION}
-          name: bihero-hello
+          name: bihero-world
           ports:
-            - containerPort: 8081
+            - containerPort: 8082
           imagePullPolicy: Always
           resources: {}
       restartPolicy: Always
