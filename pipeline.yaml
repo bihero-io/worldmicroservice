@@ -165,7 +165,6 @@ jobs:
                 output_dir=app-packaged-workspace
                 cp -R ./tested-workspace/* "${output_dir}/"
                 mvn -f "${output_dir}/pom.xml" package -Dmaven.main.skip -DskipTests
-                env
                 tag="-"$(cat metadata/build_name)
                 echo $tag >> ${output_dir}/target/classes/version.txt
                 cat ${output_dir}/target/classes/version.txt > metadata/version
@@ -202,7 +201,7 @@ jobs:
                 export DOMAIN=demo1.bihero.io
                 export HELLO_SERVICE_IMAGE_VERSION=$(cat metadata/version)
                 cat sources/k8s.yaml | envsubst > k8s/world_app_template.yaml
-                cat k8s/hello_app_template.yaml
+                cat k8s/world_app_template.yaml
       - put: kubernetes-demo
         params:
           kubectl: apply -f k8s/world_app_template.yaml
