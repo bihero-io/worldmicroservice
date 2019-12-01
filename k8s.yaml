@@ -65,4 +65,4 @@ spec:
           - path: /api/world(/|$)(.*)
             backend:
               serviceName: bihero-world
-              servicePort: 8081
+              servicePort: 8082
