@@ -17,7 +17,7 @@ public class WorldVerticle extends AbstractVerticle {
 
     public void startWorldService() {
         consumer = new ServiceBinder(vertx).setAddress("service.world")
-                .register(WorldService.class, WorldService.create());
+                .register(WorldService.class, WorldService.create(getVertx()));
     }
 
     /**
@@ -36,11 +36,6 @@ public class WorldVerticle extends AbstractVerticle {
 
                 // Generate the router
                 Router router = routerFactory.getRouter();
-
-                // Api path to handle OpenAPI doc request for our service
-                router.get("/doc").handler(context ->
-                        vertx.fileSystem().readFile("doc.yaml", buffResult ->
-                                context.response().end(buffResult.result())));
 
                 int port = config().getInteger("serverPort", 8080);
                 String host = config().getString("serverHost", "localhost");

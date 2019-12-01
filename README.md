@@ -19,7 +19,7 @@ Edit src/conf/config.json
 		"path": "/path/to/worldmicroservice/src/conf/config.json"
 	},
 	"serverPort": 8082,
-  	"serverHost": "0.0.0.0"
+	"serverHost": "0.0.0.0"
 }
 ```
 Run using config.json
