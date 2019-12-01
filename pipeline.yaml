@@ -137,7 +137,7 @@ jobs:
                 mvn -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -f "${work_dir}/pom.xml" site-deploy
                 version=$(cat $work_dir/target/classes/version.txt)
                 cat >message/msg <<EOL
-                <a href="https://nexus.dev.techedge.pro:8443/repository/reports/hello-microservice/${version}/allure/">Allure report</a>
+                <a href="https://nexus.dev.techedge.pro:8443/repository/reports/world-microservice/${version}/allure/">Allure report</a>
                 EOL
           caches:
             - path: ~/.m2/
