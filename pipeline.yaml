@@ -21,7 +21,7 @@ resources:
     type: git
     source:
       branch: master
-      uri: git@github.com:bihero-io/world-microservice.git
+      uri: git@github.com:bihero-io/worldmicroservice.git
       private_key: ((deployer-private-key))
   - name: docker-image
     type: docker-image
