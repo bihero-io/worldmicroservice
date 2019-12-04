@@ -179,6 +179,7 @@ jobs:
         params:
           build: app-packaged-workspace
           tag_file: app-packaged-workspace/target/classes/version.txt
+          tag_as_latest: true
         get_params:
           skip_download: true
       - task: make-k8s-app-template
