@@ -17,7 +17,7 @@ spec:
         io.bihero.hello.service: bihero-world
     spec:
       containers:
-        - image: bihero/world:${HELLO_SERVICE_IMAGE_VERSION}
+        - image: bihero/world:${WORLD_SERVICE_IMAGE_VERSION}
           name: bihero-world
           ports:
             - containerPort: 8082
