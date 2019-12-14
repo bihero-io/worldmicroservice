@@ -62,7 +62,7 @@ jobs:
           image_resource:
             type: docker-image
             source:
-              repository: ((docker-registry-uri))/bih/maven
+              repository: ((docker-registry-uri))/bih/maven-dind
               tag: 3-jdk-11
               username: ((docker-private-registry-user))
               password: ((docker-private-registry-password))
@@ -88,7 +88,7 @@ jobs:
                 image_resource:
                   type: docker-image
                   source:
-                    repository: ((docker-registry-uri))/bih/maven
+                    repository: ((docker-registry-uri))/bih/maven-dind
                     tag: 3-jdk-11
                     username: ((docker-private-registry-user))
                     password: ((docker-private-registry-password))
@@ -119,7 +119,7 @@ jobs:
           image_resource:
             type: docker-image
             source:
-              repository: ((docker-registry-uri))/bih/maven
+              repository: ((docker-registry-uri))/bih/maven-dind
               tag: 3-jdk-11
               username: ((docker-private-registry-user))
               password: ((docker-private-registry-password))
@@ -147,7 +147,7 @@ jobs:
           image_resource:
             type: docker-image
             source:
-              repository: ((docker-registry-uri))/bih/maven
+              repository: ((docker-registry-uri))/bih/maven-dind
               tag: 3-jdk-11
               username: ((docker-private-registry-user))
               password: ((docker-private-registry-password))
